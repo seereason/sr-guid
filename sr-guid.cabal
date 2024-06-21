@@ -30,8 +30,6 @@ library
        mtl,
        safecopy,
        snowflake
-     if impl (ghcjs)
-        build-depends: ghcjs-base
 
 test-suite ghc
   type:                exitcode-stdio-1.0
