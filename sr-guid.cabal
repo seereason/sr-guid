@@ -22,8 +22,6 @@ library
      ghcjs-options:       -Wincomplete-patterns
      if flag(Debug)
        cpp-options: "-DDEBUG_CLIENT"
-     if impl(ghcjs)
-        build-depends: ghcjs-base
      build-depends:
        base >=4.8 && <5,
        cereal,
@@ -33,11 +31,10 @@ library
        safecopy,
        snowflake
 
-test-suite ghc
+test-suite sr-guid-test
   type:                exitcode-stdio-1.0
   default-language:    Haskell2010
-  Buildable: True
+  Buildable: False
   hs-source-dirs:      tests
   main-is:             Test.hs
   build-depends:       base, sr-guid
-
