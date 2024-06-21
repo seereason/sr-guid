@@ -22,6 +22,8 @@ library
      ghcjs-options:       -Wincomplete-patterns
      if flag(Debug)
        cpp-options: "-DDEBUG_CLIENT"
+     if impl(ghcjs)
+        build-depends: ghcjs-base
      build-depends:
        base >=4.8 && <5,
        cereal,
